@@ -2,6 +2,8 @@
 const path = require('path');
 const webpackHtmlPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const webpack = require('webpack');
+
 module.exports = {
     entry:{
         app:'./src/index.js',
@@ -15,6 +17,9 @@ module.exports = {
         new CleanWebpackPlugin(),
         new webpackHtmlPlugin({
             title:"output management test"
+        }),
+        new webpack.ProvidePlugin({
+            _ : 'lodash'
         })
     ],
     output:{
