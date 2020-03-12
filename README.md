@@ -24,6 +24,8 @@ a  demo to study webpack
     
 第七章：懒加载 分支lazy-load  其实就是运用了import(/*webpackChunkName:'name'*/,'name').then()  这样第懒加载方法，点击第时候可以再去加载需要用到的文件；
 
+第八章：缓存 分支caching  请自行查看；
+
 
 
 
