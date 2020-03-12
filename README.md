@@ -9,3 +9,5 @@ a  demo to study webpack
 第三章节 ：模块热替换，也就是常说的热更新   分支在hot-module-replace  可自行查看下载;
 
 第四章节 ：tree-shaking  去除无用代码， 分支 tree-shaking  可以自行查看；
+
+第五章 ：生产环境配置  分支production-constructor 可自行查看；
