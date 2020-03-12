@@ -2,7 +2,7 @@
 const path = require('path');
 const webpackHtmlPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 // const webpack = require('webpack');
 module.exports = {
     entry:{
@@ -32,9 +32,9 @@ module.exports = {
         new webpackHtmlPlugin({
             title:"Code Splitting"
         }),
-        new BundleAnalyzerPlugin({
-            analyzerMode:"disabled"
-        })
+        // new BundleAnalyzerPlugin({
+        //     analyzerMode:"disabled"
+        // })
         // new webpack.optimize.CommonsChunkPlugin({//  webpack4 之后已经废除
         //     name:'common'//指定公共 bundle 的名称。
         // })
