@@ -2,11 +2,14 @@
 const path = require('path');
 const webpackHtmlPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-// const webpack = require('webpack');
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const webpack = require('webpack');
 module.exports = {
     entry:{
         index:'./src/index.js',
+        // vendor: [
+        //     'lodash'
+        // ]
         // another:'./src/another-module.js',
     },
     // devtool:'inline-source-map',
@@ -30,11 +33,14 @@ module.exports = {
     plugins:[
         new CleanWebpackPlugin(),
         new webpackHtmlPlugin({
-            title:"Code Splitting"
+            title:"caching"
         }),
-        new BundleAnalyzerPlugin({
-            analyzerMode:"disabled"
-        })
+        // new webpack.optimize.CommonsChunkPlugin({
+        //     name: 'vendor'
+        // }),
+        // new BundleAnalyzerPlugin({
+        //     analyzerMode:"disabled"
+        // })
         // new webpack.optimize.CommonsChunkPlugin({//  webpack4 之后已经废除
         //     name:'common'//指定公共 bundle 的名称。
         // })
@@ -42,8 +48,8 @@ module.exports = {
         // new webpack.HotModuleReplacementPlugin()
     ],
     output:{
-        filename:'[name].bundle.js',
-        chunkFilename:'[name].bundle.js',
+        filename:'[name].[chunkhash].js',
+        // chunkFilename:'[name].bundle.js',
         path:path.resolve(__dirname,'dist')
     },
     mode: "development"
