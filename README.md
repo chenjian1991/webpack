@@ -21,4 +21,12 @@ a  demo to study webpack
     //     }
     // },
     这样就可以啦，真是坑啊，希望小伙伴们了解一下；
+    
+第七章：懒加载 分支lazy-load  其实就是运用了import(/*webpackChunkName:'name'*/,'name').then()  这样第懒加载方法，点击第时候可以再去加载需要用到的文件；
+
+
+
+
+
+
 
