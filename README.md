@@ -6,4 +6,6 @@ a  demo to study webpack
 
 第二章节 ： 管理输出  分支是manage-output   根据官网做的时候发现一个版本问题，CleanWebpackPlugin 这个3.0以上 npm run build  的时候会报错，这个时候应该写成const {CleanWebpackPlugin} = require('clean-webpack-plugin'); 这个样式，而且new CleanWebpackPlugin() 括号里面不能加【'dist'】; 这样就不报错了；
 
-第三章节 ：模块热替换，也就是常说的热更新   分支在hot-module-replace  可自行查看下载
+第三章节 ：模块热替换，也就是常说的热更新   分支在hot-module-replace  可自行查看下载;
+
+第四章节 ：tree-shaking  去除无用代码， 分支 tree-shaking  可以自行查看；
