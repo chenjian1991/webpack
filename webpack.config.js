@@ -3,13 +3,10 @@ const path = require('path');
 const webpackHtmlPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const webpack = require('webpack');
+// const webpack = require('webpack');
 module.exports = {
     entry:{
         index:'./src/index.js',
-        // vendor: [
-        //     'lodash'
-        // ]
         // another:'./src/another-module.js',
     },
     // devtool:'inline-source-map',
