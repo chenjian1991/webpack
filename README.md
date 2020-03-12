@@ -11,3 +11,14 @@ a  demo to study webpack
 第四章节 ：tree-shaking  去除无用代码， 分支 tree-shaking  可以自行查看；
 
 第五章 ：生产环境配置  分支production-constructor 可自行查看；
+
+第六章： 代码分割  分支code-split   代码分割第方法 new webpack.optimize.CommonsChunkPlugin({//  webpack4 之后已经废除
+        //     name:'common'//指定公共 bundle 的名称。
+        // })
+        这个方法现在最新的webpack版本已经废除了，新的方法换成了直接配置optimization:{//最新版本的代码分割
+    //     splitChunks:{
+    //         chunks:'all',
+    //     }
+    // },
+    这样就可以啦，真是坑啊，希望小伙伴们了解一下；
+
